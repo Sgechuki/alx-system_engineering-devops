@@ -10,7 +10,7 @@ do
 	case "$counter" in 
 		4) echo "bad luck from China";;
 		9) echo "bad luck from Japan";;
-		17) echo "bad luck from Itay";;
+		17) echo "bad luck from Italy";;
 	esac
 	((counter++))
 done
