@@ -3,7 +3,7 @@
 # With a sleep 2 in between each iteration
 # I am invincible!!! when receiving a SIGTERM signal
 
-trap 'echo "I am invincible!!!"' SIGTERMx
+trap echo "I am invincible!!!" SIGTERM
 counter=1
 while [ "$counter" -eq 1 ]
 do
