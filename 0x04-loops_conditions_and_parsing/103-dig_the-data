@@ -2,4 +2,4 @@
 # parse Apache log access files using awk
 # the group and order by number of occurences
 
-awk '{print $1, $9}' apache-access.log|sort -n|uniq -cd| sort -nr
+awk '{print $1, $9}' apache-access.log|sort|uniq -cd| sort -nr
