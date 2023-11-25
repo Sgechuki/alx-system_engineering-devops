@@ -11,6 +11,7 @@
 file="school"
 if test -e "$file"
 then
+	echo "school file exists"
 	if test -s "$file"
 	then
 		echo "school file is not empty"
