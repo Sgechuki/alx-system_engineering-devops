@@ -6,6 +6,6 @@ filename="/tmp/my_process"
 counter=1
 while [ "$counter" -eq 1 ]
 do
-	echo "I am alive!">>filename
+	echo "I am alive!">>"$filename"
 	sleep 2
 done
