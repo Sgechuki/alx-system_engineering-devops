@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# localhost resolves to 127.0.0.2
+# facebook.com resolves to 8.8.8.8
+
+sed -Ei 's/^([0-9]+\.){3}[0-9]+	localhost/127.0.0.2 localhost/'
+sed -Ei 's/^([0-9]+\.){3}[0-9]+ facebook.com/8.8.8.8 facebook.com/'
