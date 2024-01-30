@@ -7,7 +7,6 @@ cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg-orig
 echo '
 frontend http_front
    bind *:80
-   stats uri /haproxy?stats
    default_backend http_back
 
 backend http_back
