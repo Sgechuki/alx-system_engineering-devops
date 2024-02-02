@@ -4,5 +4,6 @@ apt-get update
 apt-get -y install nginx
 echo "Hello World!" >/var/www/html/index.html
 new_str="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.google.com permanent;"
-sudo sed -i "s/server_name _;/$new_str/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/server_name _;/$new_str/" /etc/nginx/sites-available/default
+ln -sf  /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
