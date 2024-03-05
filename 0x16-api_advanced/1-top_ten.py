@@ -9,7 +9,7 @@ def top_ten(subreddit):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json().get('data').get('children')
-        i = 0;
+        i = 0
         for item in data:
             if i < 10:
                 print(data.get("data").get("title"))
