@@ -5,7 +5,7 @@ exec { 'raise limit':
         path    => '/usr/local/bin/:/bin/'
 }
 
-exec { 'restart nginx'
+exec { 'restart nginx':
   command => 'nginx restart',
-  path   => '/etc/init.d/'
+  path    => '/etc/init.d/'
 }
