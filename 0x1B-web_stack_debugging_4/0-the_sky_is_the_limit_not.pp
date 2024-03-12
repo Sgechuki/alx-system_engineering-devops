@@ -1,6 +1,11 @@
 #Fix Too many open files
 
 exec { 'raise limit':
-        command  => 'sed -i s/ULIMIT="-n 15"/ULIMIT="-n 4096"/g /etc/default/nginx',
-        provider => shell,
+        command => 'sed -i "s/15/4096/" /etc/default/nginx',
+        path    => '/usr/local/bin/:/bin/'
+}
+
+exec { 'restart nginx'
+  command => 'nginx restart',
+  path   => '/etc/init.d/'
 }
